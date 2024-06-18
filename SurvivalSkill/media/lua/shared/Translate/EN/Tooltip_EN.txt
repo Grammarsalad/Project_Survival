@@ -1,3 +1,0 @@
-Tooltip_EN = {
-    Tooltip_PrimitiveSkillsLocked_NoMagazine = "You must read the Primitive Survival Monthly magazine first. ",
-}
