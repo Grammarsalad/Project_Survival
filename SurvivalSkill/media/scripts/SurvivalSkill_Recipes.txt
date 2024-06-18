@@ -1,0 +1,54 @@
+module Base
+{
+    recipe Make Stone Axe
+    {
+        TreeBranch,
+        SharpedStone,
+        RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+
+        Result:AxeStone,
+        Time:80.0,
+        Category:Survivalist,
+        NeedToBeLearn:true,
+        Override:true,
+    }
+
+    recipe Make Stone Knife
+    {
+	    TreeBranch,
+	    SharpedStone,
+	    RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+
+	    Result:FlintKnife,
+	    Time:80.0,
+	    Category:Survivalist,
+        NeedToBeLearn:true,
+        Override:true,
+    }
+
+    recipe Make Stone Hammer
+    {
+        TreeBranch,
+        Stone,
+        RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+
+        Result:HammerStone,
+        Time:80.0,
+        Category:Survivalist,
+        NeedToBeLearn:true,
+        Override:true,
+    }
+
+    recipe Drill Plank
+    {
+        Plank/Log,
+        keep [Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.DullKnife]/[Recipe.GetItemTypes.SharpKnife]/SharpedStone,
+
+        Result:PercedWood,
+        Time:40.0,
+        Prop1:Source=2,
+        Prop2:Source=1,
+        NeedToBeLearn:true,
+        Override:true,
+    }
+}
