@@ -1,0 +1,292 @@
+module Base
+{
+        recipe Make Stone Axe
+        {
+            Plank/TreeBranch/WoodenStick,
+            SharpedStone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+            
+            Result:AxeStone,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survivalgooo,
+            SkillRequired       : Survival=1,
+            Time                : 80.0,
+            Override            : true,
+        }
+
+    recipe Make Stone Hammer
+        {
+            Plank/TreeBranch/WoodenStick,
+            Stone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+            
+            Result:HammerStone,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 80.0,
+            Override            : true,
+        }
+
+    recipe Make Stone Knife
+    {
+            Plank/TreeBranch/WoodenStick,
+            SharpedStone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+
+            Result:FlintKnife,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 80.0,
+            Override            : true,
+    }
+
+
+    recipe Create Spear
+    {
+        Plank/TreeBranch,
+        keep [Recipe.GetItemTypes.SharpKnife]/SharpedStone/MeatCleaver,
+
+        Result:SpearCrafted,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.CreateSpear,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Survival05,
+        Override            : true,
+    }
+
+
+    }
+        recipe Make Fishing Net
+    {
+            Twine=10,
+            Wire=5,
+
+            Result:FishingNet,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival05,
+            Time                : 150.0,
+            Override            : true,
+    }
+
+
+    recipe Make Splint
+    {
+            RippedSheets/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
+            Plank/TreeBranch/WoodenStick,
+
+            Result:Splint,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 70.0,
+            Override            : true,
+    }
+
+
+    recipe Make Wooden Box Trap
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=3,
+        Nails=5,
+
+        Result:TrapCrate,
+        Sound:Sawing,
+        Time:120.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Stick Trap
+    {
+        WoodenStick=4,
+        Twine=1,
+
+        Result:TrapStick,
+        Time:120.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Snare Trap
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=1,
+        Twine=2,
+
+        Result              : TrapSnare,
+        Sound               : Sawing,
+        Time                : 130.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Trap Box
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=4,
+        Nails=7,
+
+        Result:TrapBox,
+        Sound:Sawing,
+        Time:150.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Cage Trap
+    {
+        Wire=5,
+
+        Result:TrapCage,
+        Time:180.0,
+        Category            : Survivalist,
+        SkillRequired       : Trapping/Survival=3,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+    recipe Make Fishing Rod
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        WoodenStick,
+        Twine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRodTwineLine,
+        Time:80.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+    recipe Make Fishing Rod
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        WoodenStick,
+        FishingLine=2,
+        Paperclip/Nails,
+
+        Result:CraftedFishingRod,
+        Time:80.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+
+    recipe Fix Fishing Rod
+    {
+        FishingRodBreak,
+        Twine=2,
+        Paperclip/Nails,
+
+        Result:FishingRodTwineLine,
+        Time:80.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+    recipe Fix Fishing Rod
+    {
+        FishingRodBreak,
+        FishingLine=2,
+        Paperclip/Nails,
+
+        Result:FishingRod,
+        Time:80.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+        recipe Make Plantain Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        Plantain=5,
+
+        Result:PlantainCataplasm,
+        Time:60.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+    recipe Make Comfrey Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        Comfrey=5,
+
+        Result:ComfreyCataplasm,
+        Time:60.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+        recipe Make Wild Garlic Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        WildGarlic2=5,
+
+        Result:WildGarlicCataplasm,
+        Time:60.0,
+        Category            : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival05,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+/* new */
+
+    recipe Chip Stone
+        {
+            keep Stone,
+            Stone,
+            
+            Result:SharpedStone,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 80.0,
+        }
+
+ }

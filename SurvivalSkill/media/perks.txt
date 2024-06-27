@@ -1,6 +1,6 @@
 VERSION = 1,
 
-perk Wilderness Survival
+perk Survival
 {
 	parent = Survivalist,
 	translation = Survival,

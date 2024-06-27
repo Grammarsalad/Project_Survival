@@ -1,0 +1,81 @@
+module Base
+{
+    {
+        Base
+    }
+        item SurvivalE1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   = 220,
+        Weight          = 0.8,
+        Type            = Literature,
+        DisplayName     = Survival Vol.1,
+        DisappearOnUse  = FALSE,
+        Icon            = Book3,
+        SkillTrained    = Survival,
+        LvlSkillTrained = 1,
+        NumLevelsTrained= 2,
+        StaticModel     = Book,
+        WorldStaticModel= BookLightGreen_Ground,
+    }
+        item SurvivalE2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   = 260,
+        Weight          = 0.8,
+        Type            = Literature,
+        DisplayName     = Survival Vol.2,
+        DisappearOnUse  = FALSE,
+        Icon            = Book3,
+        SkillTrained    = Survival,
+        LvlSkillTrained = 3,
+        NumLevelsTrained= 2,
+        StaticModel     = Book,
+        WorldStaticModel= BookLightGreen_Ground,
+    }
+        item SurvivalE3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   = 300,
+        Weight          = 0.8,
+        Type            = Literature,
+        DisplayName     = Survival Vol.3,
+        DisappearOnUse  = FALSE,
+        Icon            = Book3,
+        SkillTrained    = Survival,
+        LvlSkillTrained = 5,
+        NumLevelsTrained= 2,
+        StaticModel     = Book,
+        WorldStaticModel= BookLightGreen_Ground,
+    }
+        item SurvivalE4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   = 340,
+        Weight          = 0.8,
+        Type            = Literature,
+        DisplayName     = Survival Vol.4,
+        DisappearOnUse  = FALSE,
+        Icon            = Book3,
+        SkillTrained    = Survival,
+        LvlSkillTrained = 7,
+        NumLevelsTrained= 2,
+        StaticModel     = Book,
+        WorldStaticModel= BookLightGreen_Ground,
+    }
+        item SurvivalE5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   = 380,
+        Weight          = 0.8,
+        Type            = Literature,
+        DisplayName     = Survival Vol.5,
+        DisappearOnUse  = FALSE,
+        Icon            = Book3,
+        SkillTrained    = Survival,
+        LvlSkillTrained = 9,
+        NumLevelsTrained= 2,
+        StaticModel     = Book,
+        WorldStaticModel= BookLightGreen_Ground,
+    }   
+}
