@@ -1,0 +1,6 @@
+name=Survival Skill and Primitive Survival Bridge
+id=SurvivalSkillPrimitiveSurvival
+poster=poster.png
+modversion=0.0.1
+description=This mod bridges survival skill and primitive survival mods
+require=SurvivalSkill,PSurvival

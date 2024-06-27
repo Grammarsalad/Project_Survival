@@ -1,0 +1,488 @@
+module PrimitiveSurvivalSurviveSkills
+{
+	imports
+	{
+		Base,
+	}
+	
+	recipe Carve Wooden Needle
+	{
+		Twigs = 1,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver/ButterKnife,
+
+		Result : PS_WoodenNeedle,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 50,
+		CanBeDoneFromFloor 	: True,
+		Category            : Survivalist,
+		Override            : true,
+	}
+	recipe Weave Small Rope
+	{
+		PS_BarkStrip = 10,
+
+		Result 				: PS_SmallRope,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time 				: 100,
+		CanBeDoneFromFloor 	: True,
+		Category 			: Survivalist,
+        SkillRequired       : Survival=1,
+        Override            : true,
+	}
+
+	recipe Weave Small Rope
+	{
+		PS_Straw = 30,
+
+		Result : PS_SmallRope,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 100,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=1,
+        Override            : true,
+	}
+
+	recipe Make Bark Strip
+	{
+		TreeBranch = 1,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver/ButterKnife,
+
+		Result : PS_BarkStrip = 4,
+		OnGiveXP:Recipe.OnGiveXP.Survival05,
+		Time : 80,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        Override            : true,
+	}
+
+	recipe Weave Rope
+	{
+		PS_SmallRope = 3,
+
+		Result : Rope,
+		OnGiveXP:Recipe.OnGiveXP.Survivalgooo,
+		Time : 1000,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+
+	recipe Make Bark Strip
+	{
+		Twigs = 1,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver/ButterKnife,
+
+		Result : PS_BarkStrip,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 20,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        Override            : true,
+	}
+	recipe Make Chipped Stone
+	{
+		Stone,
+	    keep [Recipe.GetItemTypes.Hammer],
+
+		Result : SharpedStone,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 100,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        Override            : true,
+	}
+	recipe Make Tent Kit
+	{
+		PS_SmallRope = 4,
+		Sheet = 2,
+		WoodenStick = 6,
+
+		Result : camping.CampingTentKit,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=1,
+        Override            : true,
+	}
+	recipe Weave Twine
+	{
+		RippedSheets = 4,
+		keep Scissors,
+
+		Result : Twine = 1,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 40,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=1,
+        Override            : true,
+	}
+	recipe Make Soap
+	{
+		Log = 2,
+		Water = 4,
+		Bacon/MuttonChop/PorkChop/Steak/Rabbitmeat/Smallanimalmeat/Smallbirdmeat,
+		NearItem : Campfire,
+
+		Result : Soap2,
+		OnGiveXP:Recipe.OnGiveXP.Survival01,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=1,
+        Override            : true,
+	}
+	recipe Make Primitive Backpack
+	{
+		Twigs = 5,
+		PS_BarkStrip = 4,
+		PS_SmallRope = 2,
+		Category : Survivalist,
+
+		Result : PS_PrimitiveBag,
+		OnGiveXP:Recipe.OnGiveXP.Survivalgooo,
+		Time : 200,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+	recipe Weave Thread
+	{
+		Twine = 15,
+
+		Result : Thread = 1,
+		OnGiveXP:Recipe.OnGiveXP.Survival05,
+		Time : 150,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log = 2,
+		Water = 4,
+		Salt,
+		Flour = 2,
+		Vinegar = 2,
+		NearItem : Campfire,
+
+		Result : Glue,
+		OnGiveXP:Recipe.OnGiveXP.Survival05,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log = 2,
+		Water = 4,
+		Vinegar = 2,
+		Corn = 5,
+		NearItem : Campfire,
+
+		Result : Glue,
+		OnGiveXP:Recipe.OnGiveXP.Survival05,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+	recipe Make Glue
+	{
+		keep Pot,
+		Log = 2,
+		Water = 4,
+		Salt,
+		Cornflour,
+		Vinegar = 2,
+		NearItem : Campfire,
+
+		Result : Glue,
+		OnGiveXP:Recipe.OnGiveXP.Survival05,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        Override            : true,
+	}
+	recipe Make Vinegar
+	{
+		keep Pot,
+		Log = 2,
+		Water = 5,
+		Corn = 5,
+		NearItem : Campfire,
+
+		Result : Vinegar,
+		OnGiveXP:Recipe.OnGiveXP.Survival10,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=3,
+        Override            : true,
+	}
+	recipe Make Vinegar
+	{
+		keep Pot,
+		Log = 2,
+		Water = 5,
+		Potato = 3,
+		NearItem : Campfire,
+
+		Result : Vinegar,
+		OnGiveXP:Recipe.OnGiveXP.Survival10,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=3,
+        Override            : true,
+	}
+
+        recipe Make Stone Axe
+        {
+            Plank/TreeBranch/WoodenStick,
+            SharpedStone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty/PS_SmallRope,
+            
+            Result:AxeStone,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survivalgooo,
+            SkillRequired       : Survival=1,
+            Time                : 80.0,
+            Override            : true,
+        }
+
+    recipe Make Stone Hammer
+        {
+            Plank/TreeBranch/WoodenStick,
+            Stone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty/PS_SmallRope,
+            
+            Result:HammerStone,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 80.0,
+            Override            : true,
+        }
+
+
+    recipe Make Stone Knife
+    {
+            Plank/TreeBranch/WoodenStick,
+            SharpedStone,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty/PS_SmallRope,
+
+            Result:FlintKnife,
+            RemoveResultItem:false,
+            CanBeDoneFromFloor  : true,
+            Category            : Survivalist,
+            OnGiveXP:Recipe.OnGiveXP.Survival01,
+            Time                : 80.0,
+            Override            : true,
+    }
+
+	recipe Make Stone Saw
+	{
+            Plank/TreeBranch/WoodenStick,
+            SharpedStone = 3,
+            RippedSheets/Twine/RippedSheetsDirty/DenimStrips/DenimStripsDirty/PS_SmallRope,
+            keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+
+            Result 				: PS_SawStone,
+			OnGiveXP:Recipe.OnGiveXP.Survival10,
+			Time : 200,
+			CanBeDoneFromFloor 	: True,
+			Category 			: Survivalist,
+        	SkillRequired      	: Survival=3,
+        	Override           	: true,
+	}
+
+    recipe Make Wooden Box Trap
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=3,
+        Nails=5,
+
+        Result:TrapCrate,
+        Sound:Sawing,
+        Time:120.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+
+    recipe Make Stick Trap
+    {
+        WoodenStick=4,
+        Twine=1,
+
+        Result:TrapStick,
+        Time:120.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Snare Trap
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=1,
+        Twine=2,
+
+        Result              : TrapSnare,
+        Sound               : Sawing,
+        Time                : 130.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+    recipe Make Trap Box
+    {
+        keep [Recipe.GetItemTypes.Saw],
+        Plank=4,
+        Nails=7,
+
+        Result:TrapBox,
+        Sound:Sawing,
+        Time:150.0,
+        Category            : Survivalist,
+        SkillRequired       : Woodwork/Trapping/Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+ 
+    recipe Make Cage Trap
+    {
+        Wire=5,
+
+        Result:TrapCage,
+        Time:180.0,
+        Category            : Survivalist,
+        SkillRequired       : Trapping/Survival=3,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+    }
+
+	recipe Scrap Stone Tool
+	{
+		PS_SawStone/FlintKnife/HammerStone/AxeStone,
+		Result : UnusableWood = 1,
+		Time : 100,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist
+		OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        Override            : true,
+	}
+
+
+	recipe Scrap Spear
+	{
+		SpearCrafted,
+		Result : UnusableWood = 1,
+		Time : 100,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+		OnGiveXP            : Recipe.OnGiveXP.Survival01,
+        Override            : true,
+	}
+
+
+	recipe Make Mino
+	{
+		PS_Straw = 100,
+		PS_SmallRope = 4,
+
+		Result : PS_Mino,
+		Time : 1000,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=4,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+	}
+	recipe Make Wood Chest Armor
+	{
+		Base.Plank = 4,
+		PS_SmallRope = 4,
+		keep PS_SawStone/Saw,
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+
+		Result : PS_WoodArmor_Chest,
+		Time : 3000,
+		CanBeDoneFromFloor : True,
+		Sound : Sawing,
+		Category : Survivalist,
+        SkillRequired       : Survival=5,
+        OnGiveXP            : Recipe.OnGiveXP.Survival15,
+        NeedToBeLearn       : true,
+        Override            : true,
+	}
+
+	recipe Make Straw Skirt
+	{
+		PS_Straw = 40,
+		PS_SmallRope = 1,
+		Result : PS_StrawSkirt,
+		Time : 300,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=3,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+	}
+
+	recipe Make Straw Sandals
+	{
+		PS_Straw = 30,
+		PS_SmallRope = 2,
+		Result : PS_StrawSandals,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=2,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+	}
+
+	recipe Carve Cudgel
+	{
+        Plank/TreeBranch/WoodenStick,
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        
+		Result : PS_Cudgel,
+		Time : 500,
+		CanBeDoneFromFloor : True,
+		Category : Survivalist,
+        SkillRequired       : Survival=1,
+        OnGiveXP            : Recipe.OnGiveXP.Survival10,
+        NeedToBeLearn       : true,
+        Override            : true,
+	}
+}
